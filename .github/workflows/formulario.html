@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Matricula</title>
+<style>
+    body{
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        margin: 0;
+        height: 100vh; 
+        font-family: Arial, sans-serif; 
+    }
+    fieldset{
+        border-radius: 30px;
+        padding: 40px;
+        border: 1px solid;
+        width: 700px; 
+        text-align: left;
+    }
+    h1{
+        text-align: center;
+        color: lightblue;
+    }
+    h2{
+        color: lightblue;
+    }
+    input[type="text"], input[type="email"]{
+        width: 50%; 
+        padding: 5px; 
+        margin: 5px 0; 
+        border: 1px solid #ccc; 
+        border-radius: 5px; 
+        }
+    input[type="date"], select{
+        padding: 5px;
+        margin: 5px 0;
+        border: 1px solid #ccc; 
+        border-radius: 5px; 
+    }
+
+    button {
+        border-radius: 5px;         
+        font-size: 16px; 
+        display: block; 
+        margin: 15px auto; 
+    }
+</style>
+</head>
+<body>
+	<fieldset style="border-radius: 30px;" >
+	<h1>Formulario de matricula</h1>
+  <h3>Creado por: Alba Lopez Mancera</h3>
+	<h4>Los campos obligatios van seguidos de *</h4>
+	
+	<h2>Datos personales</h2>
+	<fieldset>
+		<legend>Alumno</legend>
+		<form name="entrada" action ="controller" method="#">
+		<label for="nombre">Nombre:* </label><input type="text" id="nombre" name="nombre"><br><br>
+		<label for="apellido1">Primer apellido:*</label><input type="text"  id="apellido1" name="apellido1"><br><br>
+		<label for="apellido2">Segundo apellido:*</label><input type="text"  id="apellido2" name="apellido2"><br><br>
+		<label for="email">Correo electrónico:*</label><input type="text"  id="email" name="email"><br><br>
+		<label for="fechanacimiento">Fecha de nacimiento: *</label><input type="date" id="fechanacimiento" name="fechanacimiento"  required><br><br>
+		<label for="provinciadenacimiento">Provincia de Nacimiento:*</label>
+			<select name="provinciadenacimiento">
+				<option value="Albacete">Albacete</option>
+				<option value="Ciudad Real">Ciudad Real</option>
+				<option value="Cuenca">Cuenca</option>
+				<option value="Toledo">Toledo</option>
+				<option value="Guadalajara">Guadalajara</option>
+			</select>
+	</fieldset><br>
+	<fieldset>
+	<legend>Emancipado</legend>
+	<input type="radio" id="emancipado_si" name="emancipado" value="sí">
+	<label for="emancipado_si">Sí</label><br><br>
+	<input type="radio" id="emancipado_no" name="emancipado" value="no">
+	<label for="emancipado_no">No</label><br><br>
+	</fieldset>
+    <h2>Modulos de los que se matricula</h2>
+	<fieldset>
+	<legend>Alumno</legend>
+	<input type="checkbox" id="moduloes" values="DWES" name="modulos">
+	<label for="moduloes">Desarrollo Web en Entorno Servidor</label><br><br>
+	<input type="checkbox" id="moduloes" values="DWEC" name="modulos">
+	<label for="moduloes">Desarrollo Web en Entorno Cliente</label><br><br>
+	<input type="checkbox" id="moduloes" values="DAW" name="modulos">
+	<label for="moduloes">Despliegue de Aplicaciones Web</label><br><br>
+	<input type="checkbox" id="moduloes" values="DIW" name="modulos">
+	<label for="moduloes">Diseño de interfaces web</label><br><br>
+	<input type="checkbox" id="moduloes" values="EIE" name="modulos">
+	<label for="moduloes">Empresa e iniciativa emprendedora</label>
+	</fieldset>
+    <button type="submit">Guardar</button>
+</form>
+	</fieldset>
+    
+		
+</body>
+</html>
